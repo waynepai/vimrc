@@ -14,11 +14,12 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-fugitive'
 
 filetype indent on
-
 "Nerd tree
-nmap <F2> :NERDTreeToggle <CR>
+map <F2> :NERDTreeToggle <CR>
 
 "Taglist
 map <f9> :Tlist<CR>
@@ -27,15 +28,19 @@ let Tlist_Use_Right_Window=1
 
 "Airline
 set laststatus=2
-"let g:airline_powerline_fonts = 1
 let g:airline_theme='lucius'
 let g:airline#extensions#whitespace#enabled = 0
 
 "vim-better-whitespace
 highlight ExtraWhitespace ctermbg=brown
 
+"easymotion
+let g:EasyMotion_leader_key='<Space>'
+
 "Ctag
 set tags+=/synosrc/SRM-master/ds.base/source/tags
+
+map <F3> :Gblame<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -148,5 +153,4 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
-
 
